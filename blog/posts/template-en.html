@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ★ Change to English title -->
+<title>Article Title | Oideya Blog</title>
+<!-- SEO: link to Japanese version -->
+<!-- ★ Update href to match Japanese file name (e.g. post-02.html) -->
+<link rel="alternate" hreflang="ja" href="post-XX.html">
+<link rel="alternate" hreflang="en" href="post-XX-en.html">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #fafaf8; --off-white: #f2f0eb; --paper: #ede9e0;
+  --blue: #2B4FBF; --blue-dark: #1a3491; --orange: #E8601A;
+  --ink: #1c1a17; --gray: #6b6560; --light-gray: #d8d4cc;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Outfit', sans-serif; background: var(--white); color: var(--ink); }
+header { position: sticky; top: 0; z-index: 100; height: 64px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; background: rgba(250,250,248,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--light-gray); }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.logo-icon { width: 36px; height: 36px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; }
+.logo-text { font-family: 'DM Serif Display', serif; font-size: 1.35rem; }
+.logo-sub { font-size: 0.62rem; color: var(--gray); letter-spacing: 0.15em; display: block; margin-top: -2px; }
+nav { display: flex; align-items: center; gap: 28px; }
+nav a { font-size: 0.82rem; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+nav a:hover { color: var(--blue); }
+.btn-book { background: var(--blue); color: white !important; padding: 9px 22px; border-radius: 6px; font-size: 0.8rem !important; font-weight: 500 !important; }
+.btn-book:hover { background: var(--blue-dark) !important; }
+.lang-switch { background: var(--off-white); border-bottom: 1px solid var(--light-gray); padding: 10px 48px; display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+.lang-switch span { font-size: 0.68rem; color: var(--gray); }
+.lang-current { font-size: 0.72rem; font-weight: 500; color: var(--ink); background: var(--light-gray); padding: 4px 12px; border-radius: 100px; }
+.lang-switch a { font-size: 0.72rem; color: var(--blue); text-decoration: none; border: 1.5px solid var(--blue); padding: 4px 12px; border-radius: 100px; transition: all 0.2s; }
+.lang-switch a:hover { background: var(--blue); color: white; }
+.breadcrumb { padding: 14px 48px; font-size: 0.72rem; color: var(--gray); display: flex; gap: 8px; align-items: center; border-bottom: 1px solid var(--light-gray); }
+.breadcrumb a { color: var(--gray); text-decoration: none; transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb .sep { color: var(--light-gray); }
+.article-hero { position: relative; height: 480px; overflow: hidden; background: var(--paper); }
+.article-hero img { width: 100%; height: 100%; object-fit: cover; }
+.article-hero-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--paper), var(--off-white)); font-family: 'DM Serif Display', serif; font-size: 1rem; letter-spacing: 0.2em; color: rgba(0,0,0,0.15); }
+.article-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(28,26,23,0.72) 0%, transparent 60%); }
+.article-hero-meta { position: absolute; bottom: 40px; left: 0; right: 0; padding: 0 48px; color: white; }
+.article-tag { display: inline-block; font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 600; margin-bottom: 12px; background: var(--orange); color: white; padding: 4px 12px; border-radius: 2px; }
+.article-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.6rem, 4vw, 2.8rem); line-height: 1.25; max-width: 720px; }
+.article-date { font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-top: 12px; }
+.article-wrap { max-width: 1100px; margin: 0 auto; padding: 72px 48px; display: grid; grid-template-columns: 1fr 280px; gap: 80px; align-items: start; }
+.article-body p { font-size: 0.97rem; line-height: 1.95; color: var(--gray); margin-bottom: 24px; font-weight: 300; }
+.article-body h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--ink); margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--light-gray); }
+.article-body h3 { font-size: 1rem; font-weight: 600; color: var(--ink); margin: 32px 0 14px; }
+.article-body ul { margin: 0 0 24px 1.2em; color: var(--gray); font-size: 0.95rem; line-height: 1.9; font-weight: 300; }
+.article-body ul li { margin-bottom: 6px; }
+.article-img { width: 100%; border-radius: 4px; overflow: hidden; margin: 36px 0; }
+.article-img img { width: 100%; display: block; }
+.article-img-placeholder { width: 100%; aspect-ratio: 16/9; background: var(--paper); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; letter-spacing: 0.15em; color: rgba(0,0,0,0.18); }
+.article-img figcaption { font-size: 0.72rem; color: var(--gray); margin-top: 8px; text-align: center; }
+.info-box { background: var(--off-white); border-left: 3px solid var(--blue); padding: 24px 28px; margin: 36px 0; border-radius: 0 4px 4px 0; }
+.info-box h4 { font-size: 0.82rem; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+.info-box p { font-size: 0.82rem; color: var(--gray); line-height: 1.8; margin: 0; }
+.sidebar { position: sticky; top: 84px; }
+.sidebar-block { background: var(--off-white); border-radius: 4px; padding: 28px; margin-bottom: 24px; }
+.sidebar-block h3 { font-family: 'DM Serif Display', serif; font-size: 1rem; color: var(--ink); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--light-gray); }
+.sidebar-post { display: flex; gap: 12px; margin-bottom: 16px; text-decoration: none; color: inherit; transition: opacity 0.2s; }
+.sidebar-post:last-child { margin-bottom: 0; }
+.sidebar-post:hover { opacity: 0.7; }
+.sidebar-post-img { width: 60px; height: 60px; flex-shrink: 0; background: var(--paper); border-radius: 2px; overflow: hidden; }
+.sidebar-post-img img { width: 100%; height: 100%; object-fit: cover; }
+.sidebar-post-img-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: rgba(0,0,0,0.2); }
+.sidebar-post-title { font-size: 0.78rem; line-height: 1.5; color: var(--ink); }
+.sidebar-post-date { font-size: 0.68rem; color: var(--gray); margin-top: 4px; display: block; }
+.sidebar-cta { background: var(--blue); border-radius: 4px; padding: 28px; text-align: center; text-decoration: none; display: block; transition: background 0.2s, transform 0.15s; }
+.sidebar-cta:hover { background: var(--blue-dark); transform: translateY(-2px); }
+.sidebar-cta h3 { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: white; margin-bottom: 8px; }
+.sidebar-cta p { font-size: 0.75rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 16px; }
+.sidebar-cta-btn { display: inline-block; background: white; color: var(--blue); padding: 8px 20px; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+.cat-link { display: block; font-size: 0.8rem; color: var(--gray); text-decoration: none; line-height: 2.3; transition: color 0.2s; }
+.cat-link:hover { color: var(--blue); }
+.back-section { border-top: 1px solid var(--light-gray); padding: 48px; max-width: 1100px; margin: 0 auto; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--blue); text-decoration: none; font-weight: 500; transition: gap 0.2s; }
+.back-link::before { content: '←'; }
+.back-link:hover { gap: 12px; }
+footer { background: #131110; padding: 48px; text-align: center; }
+.footer-logo { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: white; display: block; margin-bottom: 16px; }
+.footer-links { display: flex; justify-content: center; gap: 32px; margin-bottom: 24px; flex-wrap: wrap; }
+.footer-links a { font-size: 0.78rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: white; }
+.footer-copy { font-size: 0.68rem; color: rgba(255,255,255,0.2); }
+@media (max-width: 900px) {
+  header { padding: 0 24px; } nav { display: none; }
+  .lang-switch, .breadcrumb { padding-left: 24px; padding-right: 24px; }
+  .article-hero { height: 300px; } .article-hero-meta { padding: 0 24px; bottom: 24px; }
+  .article-wrap { grid-template-columns: 1fr; padding: 40px 24px; gap: 40px; }
+  .sidebar { position: static; } .back-section { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="../../index.html" class="logo">
+    <div class="logo-icon">🏡</div>
+    <div><span class="logo-text">Oideya</span><span class="logo-sub">GUEST HOUSE · OSAKA</span></div>
+  </a>
+  <nav>
+    <a href="../../index.html#about">About</a>
+    <a href="../../index.html#rooms">Rooms</a>
+    <a href="../../index.html#plan">Rates</a>
+    <a href="../index-en.html">Blog</a>
+    <a href="../../index.html#access">Access</a>
+    <a href="../../index.html#contact" class="btn-book">Book Now</a>
+  </nav>
+</header>
+
+<!-- Language switch -->
+<div class="lang-switch">
+  <span>Language:</span>
+  <!-- ★ Update href to matching Japanese file name -->
+  <a href="post-XX.html">🇯🇵 日本語</a>
+  <span class="lang-current">🇺🇸 English</span>
+</div>
+
+<div class="breadcrumb">
+  <a href="../../index.html">Home</a>
+  <span class="sep">/</span>
+  <a href="../index-en.html">Blog</a>
+  <span class="sep">/</span>
+  <!-- ★ Change to article title -->
+  <span>Article Title</span>
+</div>
+
+<!-- ★★★ Cover image
+     With photo  → delete the placeholder div, uncomment the img tag
+     Without photo → leave as is -->
+<div class="article-hero">
+  <div class="article-hero-placeholder">📸 Place cover photo here</div>
+  <!-- <img src="photo-filename.jpg" alt="Photo description"> -->
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-meta">
+    <!-- ★ Category options: Local Food / Sightseeing / About Oideya / Osaka Life -->
+    <span class="article-tag">Category</span>
+    <!-- ★ Change title -->
+    <h1 class="article-title">Write Your English Title Here</h1>
+    <!-- ★ Change date -->
+    <p class="article-date">Month Day, 2026</p>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <article class="article-body">
+
+    <!-- ★★★ Write your article body below ★★★ -->
+
+    <p>Write your lead paragraph here. This is where you hook the reader and introduce the topic.</p>
+
+    <h2>Section Heading 1</h2>
+    <p>Write your body text here.</p>
+
+    <!-- Insert a photo -->
+    <figure class="article-img">
+      <!-- <img src="photo-filename.jpg" alt="Photo description"> -->
+      <div class="article-img-placeholder">📸 In-article photo</div>
+      <figcaption>Photo caption goes here</figcaption>
+    </figure>
+
+    <h2>Section Heading 2</h2>
+    <p>Write your body text here.</p>
+
+    <h3>Sub-heading</h3>
+    <ul>
+      <li>Bullet point 1</li>
+      <li>Bullet point 2</li>
+      <li>Bullet point 3</li>
+    </ul>
+
+    <div class="info-box">
+      <h4>📍 Practical Info</h4>
+      <p>Add address, opening hours, or other useful details here.</p>
+    </div>
+
+    <p>Write your closing paragraph here.</p>
+
+    <!-- ★★★ Article ends here ★★★ -->
+
+  </article>
+
+  <aside class="sidebar">
+    <a href="../../index.html#contact" class="sidebar-cta">
+      <h3>Stay at Oideya</h3>
+      <p>A whole-house guesthouse in Osaka. 5 min by train to Umeda.</p>
+      <span class="sidebar-cta-btn">Check Availability →</span>
+    </a>
+
+    <!-- ★ Update related post links -->
+    <div class="sidebar-block">
+      <h3>Related Posts</h3>
+      <a href="post-01-en.html" class="sidebar-post">
+        <div class="sidebar-post-img"><div class="sidebar-post-img-ph">📸</div></div>
+        <div>
+          <div class="sidebar-post-title">2-min Walk! The Freshest Seafood Izakaya in the Neighborhood</div>
+          <span class="sidebar-post-date">2026.01.20</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="sidebar-block">
+      <h3>Categories</h3>
+      <a href="../index-en.html" class="cat-link">🍣 Local Food</a>
+      <a href="../index-en.html" class="cat-link">🗺 Sightseeing</a>
+      <a href="../index-en.html" class="cat-link">🏡 About Oideya</a>
+      <a href="../index-en.html" class="cat-link">🌆 Osaka Life</a>
+    </div>
+  </aside>
+</div>
+
+<div class="back-section">
+  <a href="../index-en.html" class="back-link">Back to Blog</a>
+</div>
+
+<footer>
+  <span class="footer-logo">Oideya</span>
+  <div class="footer-links">
+    <a href="../../index.html">Home</a>
+    <a href="../index-en.html">Blog</a>
+    <a href="../../index.html#contact">Book Now</a>
+  </div>
+  <p class="footer-copy">© 2026 Oideya Guest House. All rights reserved.</p>
+</footer>
+</body>
+</html>

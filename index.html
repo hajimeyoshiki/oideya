@@ -633,6 +633,57 @@ section { padding: 100px 0; }
 }
 .btn-submit:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(43,79,191,0.3); }
 
+/* ─── FAQ ─── */
+#faq { background: var(--off-white); }
+
+.faq-list { max-width: 720px; margin: 0 auto; }
+
+.faq-item {
+  border-bottom: 1px solid var(--light-gray);
+}
+.faq-item:first-child { border-top: 1px solid var(--light-gray); }
+
+.faq-item summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+  gap: 16px;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--blue-muted);
+  color: var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1;
+  transition: background 0.25s, color 0.25s, transform 0.3s;
+}
+.faq-item[open] .faq-icon {
+  background: var(--blue);
+  color: white;
+  transform: rotate(45deg);
+}
+
+.faq-body {
+  padding: 0 48px 24px 0;
+  font-size: 0.88rem;
+  line-height: 1.95;
+  color: var(--gray);
+  font-weight: 300;
+}
+
 /* ─── FOOTER ─── */
 footer {
   background: #131110;
@@ -718,6 +769,7 @@ footer {
     <a href="#plan">料金</a>
     <a href="#blog">ブログ</a>
     <a href="#access">アクセス</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact" class="btn-book">予約・問い合わせ</a>
   </nav>
 </header>
@@ -1003,6 +1055,52 @@ footer {
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:56px;">
+      <span class="tag">FAQ</span>
+      <h2 class="section-title">よくあるご質問</h2>
+      <p class="section-sub">ご不明な点がございましたら、お気軽にお問い合わせください。</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>チェックインとチェックアウトの時間は？<span class="faq-icon">+</span></summary>
+        <p class="faq-body">チェックインは15:00〜21:00、チェックアウトは11:00です。セルフチェックインにも対応しておりますので、お時間が変わる場合はお気軽にご相談ください。</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>何名まで宿泊できますか？<span class="faq-icon">+</span></summary>
+        <p class="faq-body">最大8名様までご利用いただけます。ご家族やグループでのご利用に最適な一棟貸しです。</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>駐車場はありますか？<span class="faq-icon">+</span></summary>
+        <p class="faq-body">専用駐車場はございませんが、周辺にコインパーキングがございます（有料）。神崎川駅から徒歩圏内のため、電車でのアクセスが大変便利です。</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>ペットの同伴はできますか？<span class="faq-icon">+</span></summary>
+        <p class="faq-body">誠に申し訳ございませんが、ペットのご入館はお断りしております。</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Wi-Fiは利用できますか？<span class="faq-icon">+</span></summary>
+        <p class="faq-body">高速Wi-Fiをご用意しております。接続情報は室内の案内をご参照ください。</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>施設内は禁煙ですか？<span class="faq-icon">+</span></summary>
+        <p class="faq-body">はい、施設内は全面禁煙となっております。ご理解のほどよろしくお願いいたします。</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>キャンセルポリシーを教えてください。<span class="faq-icon">+</span></summary>
+        <p class="faq-body">OTA（Airbnb・Booking.com・Agoda）からのご予約は、各プラットフォームのキャンセルポリシーに従います。直接予約の場合、チェックイン3日前までのキャンセルは無料、それ以降は1泊分のキャンセル料が発生します。</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>近くにスーパーやコンビニはありますか？<span class="faq-icon">+</span></summary>
+        <p class="faq-body">徒歩5分圏内にコンビニ・スーパーがございます。地元の三津屋商店街もすぐそばで、地域の雰囲気をお楽しみいただけます。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -1102,6 +1200,7 @@ footer {
         <a href="#rooms">空間のご案内</a>
         <a href="#plan">料金プラン</a>
         <a href="#access">アクセス</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div class="footer-col">
         <h5>予約</h5>

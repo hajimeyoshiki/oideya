@@ -630,6 +630,57 @@ section { padding: 100px 0; }
 }
 .btn-submit:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(43,79,191,0.3); }
 
+/* ─── FAQ ─── */
+#faq { background: var(--off-white); }
+
+.faq-list { max-width: 720px; margin: 0 auto; }
+
+.faq-item {
+  border-bottom: 1px solid var(--light-gray);
+}
+.faq-item:first-child { border-top: 1px solid var(--light-gray); }
+
+.faq-item summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+  gap: 16px;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--blue-muted);
+  color: var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1;
+  transition: background 0.25s, color 0.25s, transform 0.3s;
+}
+.faq-item[open] .faq-icon {
+  background: var(--blue);
+  color: white;
+  transform: rotate(45deg);
+}
+
+.faq-body {
+  padding: 0 48px 24px 0;
+  font-size: 0.88rem;
+  line-height: 1.95;
+  color: var(--gray);
+  font-weight: 300;
+}
+
 /* ─── FOOTER ─── */
 footer {
   background: #131110;
@@ -715,6 +766,7 @@ footer {
     <a href="#plan">Rates</a>
     <a href="#blog">Blog</a>
     <a href="#access">Access</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact" class="btn-book">Book Now</a>
   </nav>
 </header>
@@ -1002,6 +1054,52 @@ footer {
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:56px;">
+      <span class="tag">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Can't find your answer? Feel free to reach out to us directly.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>What are the check-in and check-out times?<span class="faq-icon">+</span></summary>
+        <p class="faq-body">Check-in is between 3:00 PM and 9:00 PM. Check-out is by 11:00 AM. Self check-in is also available — just let us know if your schedule changes.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>How many guests can stay?<span class="faq-icon">+</span></summary>
+        <p class="faq-body">Up to 8 guests can be accommodated. The entire house is rented exclusively for your group, making it ideal for families and friends.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Is parking available?<span class="faq-icon">+</span></summary>
+        <p class="faq-body">There is no dedicated on-site parking, but coin parking lots are available nearby. The property is a short walk from Kanzakigawa Station, so public transport is very convenient.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Are pets allowed?<span class="faq-icon">+</span></summary>
+        <p class="faq-body">Unfortunately, we are unable to accommodate pets. We appreciate your understanding.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Is Wi-Fi available?<span class="faq-icon">+</span></summary>
+        <p class="faq-body">Yes, high-speed Wi-Fi is available throughout the property. Connection details can be found in the in-house guide.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Is the property non-smoking?<span class="faq-icon">+</span></summary>
+        <p class="faq-body">Yes, the entire property is non-smoking. Thank you for your cooperation.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>What is the cancellation policy?<span class="faq-icon">+</span></summary>
+        <p class="faq-body">Bookings made via OTA platforms (Airbnb, Booking.com, Agoda) follow each platform's cancellation policy. For direct bookings, cancellations are free up to 3 days before check-in; cancellations after that will incur a one-night fee.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Are there convenience stores or supermarkets nearby?<span class="faq-icon">+</span></summary>
+        <p class="faq-body">Yes, there are convenience stores and supermarkets within a 5-minute walk. The local Mitsuya shotengai (shopping street) is also just around the corner.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
@@ -1101,6 +1199,7 @@ footer {
         <a href="#rooms">Rooms &amp; Space</a>
         <a href="#plan">Rates</a>
         <a href="#access">Access</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div class="footer-col">
         <h5>Book</h5>

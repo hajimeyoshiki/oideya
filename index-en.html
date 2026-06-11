@@ -726,6 +726,33 @@ footer {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
+/* ─── REVIEWS PREVIEW ─── */
+#reviews-preview { background: var(--off-white); }
+.review-mini-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px;
+}
+.review-mini-card {
+  background: white; border-radius: 12px; padding: 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.review-mini-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.07); transform: translateY(-2px); }
+.review-mini-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.review-mini-origin { font-size: 0.82rem; font-weight: 500; color: var(--ink); }
+.review-mini-score { display: flex; align-items: baseline; gap: 3px; flex-shrink: 0; }
+.review-mini-star { color: var(--yellow); font-size: 0.9rem; }
+.review-mini-num { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--ink); line-height: 1; }
+.review-mini-text { font-size: 0.88rem; color: var(--gray); line-height: 1.8; font-weight: 300; flex: 1; }
+.reviews-preview-footer { margin-top: 48px; text-align: center; }
+.btn-outline {
+  display: inline-block;
+  border: 1.5px solid var(--blue); color: var(--blue);
+  padding: 12px 32px; border-radius: 8px;
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.btn-outline:hover { background: var(--blue); color: white; transform: translateY(-2px); }
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   #hero { grid-template-columns: 1fr; }
@@ -738,6 +765,7 @@ footer {
   .footer-inner { flex-direction: column; gap: 40px; }
   nav { display: none; }
   .container { padding: 0 24px; }
+  .review-mini-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .blog-grid { grid-template-columns: 1fr; }
@@ -1097,6 +1125,52 @@ footer {
         <summary>Are there convenience stores or supermarkets nearby?<span class="faq-icon">+</span></summary>
         <p class="faq-body">Yes, there are convenience stores and supermarkets within a 5-minute walk. The local Mitsuya shotengai (shopping street) is also just around the corner.</p>
       </details>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS PREVIEW -->
+<section id="reviews-preview">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:0;">
+      <span class="tag">Guest Reviews</span>
+      <h2 class="section-title">What Our Guests Say</h2>
+      <p class="section-sub">Guests from around the world have stayed at Oideya. Booking.com score 8.5 / 10.</p>
+    </div>
+    <div class="review-mini-grid">
+      <div class="review-mini-card reveal">
+        <div class="review-mini-header">
+          <span class="review-mini-origin">🇬🇧 United Kingdom · Family trip</span>
+          <div class="review-mini-score">
+            <span class="review-mini-star">★</span>
+            <span class="review-mini-num">10.0</span>
+          </div>
+        </div>
+        <p class="review-mini-text">"Perfect size for a family. It was very comfortable and great."</p>
+      </div>
+      <div class="review-mini-card reveal reveal-delay-1">
+        <div class="review-mini-header">
+          <span class="review-mini-origin">🇯🇵 Japan · Friends trip</span>
+          <div class="review-mini-score">
+            <span class="review-mini-star">★</span>
+            <span class="review-mini-num">10.0</span>
+          </div>
+        </div>
+        <p class="review-mini-text">"Well-equipped and spacious. The seamless communication with the host was also very reassuring."</p>
+      </div>
+      <div class="review-mini-card reveal reveal-delay-2">
+        <div class="review-mini-header">
+          <span class="review-mini-origin">🇨🇿 Czech Republic · Family trip</span>
+          <div class="review-mini-score">
+            <span class="review-mini-star">★</span>
+            <span class="review-mini-num">10.0</span>
+          </div>
+        </div>
+        <p class="review-mini-text">"Got to enjoy the whole traditional Japanese house. Had everything you need. Easy access to Umeda and Kobe."</p>
+      </div>
+    </div>
+    <div class="reviews-preview-footer reveal">
+      <a href="reviews_en.html" class="btn-outline">See All Reviews →</a>
     </div>
   </div>
 </section>

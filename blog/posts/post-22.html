@@ -59,6 +59,14 @@
         "@type": "Answer",
         "text": "はい。セブン-イレブンに設置されているセブン銀行ATMは、Visa・Mastercard・銀聯・American Express・JCB・Discover・Diners Clubなど海外発行のカードに対応しています。1回あたりの引き出し限度額は10万円（磁気ストライプカードの場合は3万円）で、ATM利用手数料が別途かかります。"
       }
+    },
+    {
+      "@type": "Question",
+      "name": "おすすめのeSIMサービスはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oideyaでは「Lifetime eSIM」をおすすめしています。一度購入すれば繰り返し利用できるのが特徴で、次回以降の来日時も同じeSIMを再利用できます。渡航前にダウンロードしておけば、到着後すぐにインターネットに接続できます。"
+      }
     }
   ]
 }
@@ -110,6 +118,10 @@ nav a:hover{color:var(--blue);}
 .lead-box strong{color:var(--ink);font-weight:500;}
 
 .option-card{background:var(--off-white);border-radius:10px;padding:24px 26px;margin:20px 0;border-left:4px solid var(--wifi);}
+.option-card.featured{border:2px solid var(--wifi);border-left:4px solid var(--wifi);background:var(--wifi-light);}
+.option-badge{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:white;font-size:0.68rem;font-weight:700;padding:3px 11px;border-radius:100px;letter-spacing:0.04em;margin-bottom:10px;}
+.esim-cta-btn{display:inline-block;background:var(--wifi);color:white;padding:11px 24px;border-radius:6px;font-size:0.82rem;font-weight:600;text-decoration:none;margin-top:8px;}
+.esim-cta-btn:hover{background:#076b82;}
 .option-card-head{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
 .option-icon{font-size:1.5rem;line-height:1;flex-shrink:0;}
 .option-card h4{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--ink);margin:0;}
@@ -256,20 +268,23 @@ footer{background:#131110;padding:48px;text-align:center;}
       <p>ルーターを持ち歩く必要がなく、荷物を増やしたくない一人旅にも向いている。ただしSIMを入れ替えている間は元のSIMでの着信ができなくなる点は留意しておきたい。</p>
     </div>
 
-    <div class="option-card">
+    <div class="option-card featured">
       <div class="option-card-head">
         <span class="option-icon">💳</span>
         <h4>選択肢3：eSIM（事前ダウンロード）</h4>
       </div>
+      <span class="option-badge">✦ Oideyaのおすすめ</span>
       <p>対応端末であれば、渡航前にスマートフォンへeSIMをダウンロードしておき、<strong>日本到着と同時に有効化する</strong>という方法もある。空港でのカウンター待ちや自動販売機の操作が不要で、機内モードを切ってすぐインターネットに繋がるのが最大の利点だ。事前準備さえしておけば、到着後の手続きがまったく発生しない。</p>
+      <p>数あるeSIMサービスの中でも特におすすめしたいのが<strong>「Lifetime eSIM」</strong>だ。名前の通り、<strong>一度購入すれば繰り返し使える</strong>のが最大の特徴で、次回以降の来日時にも同じeSIMを再利用できる。毎回新しいSIM・eSIMを買い直す手間がなくなり、リピーターには特に便利な選択肢だ。</p>
+      <a href="https://lifetime-esim.com/t/oideya-fc7bc5ae" target="_blank" class="esim-cta-btn">Lifetime eSIMを見てみる →</a>
     </div>
 
     <table class="compare-table">
       <thead><tr><th>方法</th><th>メリット</th><th>向いている人</th></tr></thead>
       <tbody>
-        <tr class="hl"><td>Wi-Fiルーター</td><td>複数人でシェア可能・返却が簡単</td><td>グループ・家族旅行</td></tr>
+        <tr><td>Wi-Fiルーター</td><td>複数人でシェア可能・返却が簡単</td><td>グループ・家族旅行</td></tr>
         <tr><td>物理SIM</td><td>荷物が増えない・自分のスマホで完結</td><td>一人旅・身軽に動きたい人</td></tr>
-        <tr><td>eSIM</td><td>到着後の手続きがゼロ・即座に使える</td><td>事前準備を厭わない人・対応端末を持つ人</td></tr>
+        <tr class="hl"><td>eSIM ✦おすすめ</td><td>到着後の手続きがゼロ・即座に使える・一度買えば繰り返し使える（<a href="https://lifetime-esim.com/t/oideya-fc7bc5ae" target="_blank">Lifetime eSIM</a>）</td><td>事前準備を厭わない人・リピーター</td></tr>
       </tbody>
     </table>
 
@@ -366,7 +381,7 @@ footer{background:#131110;padding:48px;text-align:center;}
         <span class="option-icon">🎯</span>
         <h4>到着後の動き方（モデルケース）</h4>
       </div>
-      <p><strong>1. 事前にeSIMまたはWi-Fiルーターを予約しておく</strong>——渡航前にオンラインで手続きを済ませておけば、到着後の待ち時間を最小限にできる。</p>
+      <p><strong>1. 事前に<a href="https://lifetime-esim.com/t/oideya-fc7bc5ae" target="_blank">eSIM</a>またはWi-Fiルーターを予約しておく</strong>——渡航前にオンラインで手続きを済ませておけば、到着後の待ち時間を最小限にできる。</p>
       <p><strong>2. 到着ロビーで当座の現金を用意</strong>——両替所またはATMで、初日〜2日分程度の現金を確保する。大きな金額を空港でまとめて両替する必要はない。</p>
       <p><strong>3. 大阪市内・滞在エリアで追加の両替やATM利用</strong>——Oideya周辺のセブン-イレブンなど、コンビニATMを日常的な現金確保の手段として活用する。</p>
     </div>
@@ -381,7 +396,7 @@ footer{background:#131110;padding:48px;text-align:center;}
     <p>Oideya Guest Houseへ向かう前に、以下の項目を確認しておくと当日がスムーズだ。</p>
 
     <ul class="checklist">
-      <li><strong>Wi-Fi／SIM／eSIMのいずれかを確保済みか</strong>——Oideyaまでの移動中も地図アプリなどを使えるようにしておく</li>
+      <li><strong>Wi-Fi／SIM／<a href="https://lifetime-esim.com/t/oideya-fc7bc5ae" target="_blank">eSIM</a>のいずれかを確保済みか</strong>——Oideyaまでの移動中も地図アプリなどを使えるようにしておく</li>
       <li><strong>初日分の現金を用意したか</strong>——交通費や食事代など、最初の数時間で必要になる分</li>
       <li><strong>交通系ICカード（Suica・ICOCA等）を準備したか</strong>——<a href="post-13.html">大阪の交通ガイド</a>も参考に</li>
       <li><strong>Oideyaまでのルートを確認したか</strong>——関空から神崎川駅までのアクセスを事前にチェック</li>
@@ -413,6 +428,10 @@ footer{background:#131110;padding:48px;text-align:center;}
       <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">日本のコンビニATMで海外のカードから現金を引き出せますか？</div>
         <div class="faq-a">はい。セブン-イレブンに設置されているセブン銀行ATMは、Visa・Mastercard・銀聯・American Express・JCB・Discover・Diners Clubなど海外発行のカードに対応しています。1回あたりの引き出し限度額は10万円（磁気ストライプカードの場合は3万円）で、ATM利用手数料が別途かかります。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">おすすめのeSIMサービスはありますか？</div>
+        <div class="faq-a">Oideyaでは<a href="https://lifetime-esim.com/t/oideya-fc7bc5ae" target="_blank">「Lifetime eSIM」</a>をおすすめしています。一度購入すれば繰り返し利用できるのが特徴で、次回以降の来日時も同じeSIMを再利用できます。渡航前にダウンロードしておけば、到着後すぐにインターネットに接続できます。</div>
       </div>
     </div>
 
